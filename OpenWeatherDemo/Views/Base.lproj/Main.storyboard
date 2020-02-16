@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="OpenWeatherDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-Sh-aRV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="JrS-CN-uK0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Gh-Sh-aRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9E2-9D-R2P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Gh-Sh-aRV" secondAttribute="trailing" id="Lvu-w9-AI2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Gh-Sh-aRV" secondAttribute="bottom" id="X8n-n7-NwZ"/>
+                            <constraint firstItem="9Gh-Sh-aRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gTa-yS-Efc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="citiesTableView" destination="9Gh-Sh-aRV" id="psM-df-esl"/>
+                        <outlet property="searchBar" destination="JrS-CN-uK0" id="kNx-5j-klr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="uge-Xb-gjY">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" modalPresentationStyle="overCurrentContext" id="aQl-hs-RAD" customClass="SearchViewController" customModule="OpenWeatherDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgJ-7Z-c9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Udt-b1-1qA">
+                                <rect key="frame" x="40" y="194" width="334" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="BzF-mw-1En">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.41519036091549294" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nw2-ye-GWY" firstAttribute="bottom" secondItem="Udt-b1-1qA" secondAttribute="bottom" constant="70" id="5EN-jL-3hp"/>
+                            <constraint firstItem="Udt-b1-1qA" firstAttribute="leading" secondItem="nw2-ye-GWY" secondAttribute="leading" constant="40" id="BOS-wu-QuC"/>
+                            <constraint firstItem="Udt-b1-1qA" firstAttribute="top" secondItem="nw2-ye-GWY" secondAttribute="top" constant="150" id="dcU-J5-M6Y"/>
+                            <constraint firstItem="nw2-ye-GWY" firstAttribute="trailing" secondItem="Udt-b1-1qA" secondAttribute="trailing" constant="40" id="zQ5-eR-0NV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nw2-ye-GWY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="BzF-mw-1En" id="fVh-XH-JTF"/>
+                        <outlet property="searchTableView" destination="Udt-b1-1qA" id="aJ1-W1-JKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAx-kf-mSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="133"/>
+        </scene>
+    </scenes>
+</document>
