@@ -71,7 +71,7 @@ class MainViewController: BaseViewController {
                 } else {
                     self.extendCell(indexPath: indexPath)
                 }
-        }.disposed(by: viewModel.bag)
+            }.disposed(by: viewModel.bag)
     }
     
     func setupSearchBar(){
